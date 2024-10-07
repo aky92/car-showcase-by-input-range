@@ -5,6 +5,8 @@ let scroll__show=document.getElementById('scroll__show');
 
 //2.function which has switch case to chnage image
 function fun(value){
+
+    //old code with switch method
     // switch(value){
     //         case '1':
     //         document.body.style.backgroundImage='url(images/1.webp)';
@@ -98,10 +100,14 @@ function fun(value){
     //             document.body.style.backgroundColor='purple';
     // }
 
-
-    if(scroll__show.value>=1 && scroll__show.value<=22){
-        document.body.style.backgroundImage='url(images/`${scroll__show.value}`.webp)';
+    const imageBasePath = 'images/';
+    const imageExtension = '.webp';
+    if (value >= 1 && value <= 22) {
+        document.body.style.backgroundImage = `url(${imageBasePath}${value}${imageExtension})`;
+    } else {
+        document.body.style.backgroundColor = 'purple';
     }
+      
 }
 
 //3.on load show 1st image

@@ -10,11 +10,18 @@ body{
     height: 100Vh;
     transition: background-color 0.5s;
 }
-
-#scroll__show{
+.scroll__show--div{
+    background-color: #940008;
+    width: 100%;
+    z-index: 999999;
+    bottom: 0;
     position: absolute;
-    bottom:0;
-    height:20vh;
-    left:40%;
-    background-color: antiquewhite;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
+#scroll__show{
+    width:500px;
+}
+
